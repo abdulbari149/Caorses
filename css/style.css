@@ -9,12 +9,14 @@
 body {
   background-color: #d9f0f3;
   max-width: 100vw;
+  min-height: 500vh;
   font-family: "Ubuntu", sans-serif;
 }
 
 #header-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, mixmax(400px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 100px);
   grid-row-gap: 10px;
   align-items: center;
   justify-items: center;
@@ -23,18 +25,26 @@ body {
 
 .brand,
 .contact-links,
-.nav-bar,
-.nav-bar ul,
-.contact-item-container {
+#nav-bar,
+#nav-bar .nav-list,
+.contact-item{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-
+/* company name or brand */
 .section1 {
   display: flex;
   flex-direction: row;
+}
+.brand-logo img {
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-right: 8px;
 }
 
 .brand-title h3 {
@@ -44,54 +54,53 @@ body {
   color: #856d5afa;
 }
 
-.contact-links {
-  width: 648px;
-  height: 84px;
-}
-
 .section2 {
-  grid-column: 3/4;
+  grid-column: 2/3;
 }
-
-.contact-item-container .contact-item-detail {
+.contact-links{
+  width: 650px;
+  height: 80px;
+}
+.contact-item{
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
 }
 
-.contact-item-container .contact-item-detail h4 {
-  font-size: 18px;
+.contact-item-detail{
+  margin-left:6px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+
+}
+#address-info{
+  width: 34%;
+}
+.contact-item-detail h4 {
+  text-align: start;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   color: #856d5afa;
 }
 
-.contact-item-container .contact-item-detail p {
+.contact-item-detail p {
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   color: #856d5afa;
+  white-space: normal;
 }
-
-.contact-item-container .contact-item-img {
-  margin-right: 4px;
-}
-
-.contact-item-container#call-info {
-  width: 166px;
-}
-
-.contact-item-container#email-info {
-  width: 188px;
-}
-
-.contact-item-container#address-info {
-  width: 160px;
-}
-
 .section3 {
   grid-column: 1/4;
 }
 
-.nav-bar {
+#nav-bar {
   background-color: azure;
   text-align: center;
   margin: 10px auto;
@@ -102,29 +111,31 @@ body {
   box-shadow: 0px 2px 6px #856d5afa;
 }
 
-.nav-bar ul {
+#nav-bar .nav-list {
   list-style: none;
   padding: 0;
 }
 
-.nav-bar ul li {
+#nav-bar .nav-items {
   padding: 2px 10px;
 }
 
-.nav-bar ul li a {
+#nav-bar .nav-links {
   color: #856d5afa;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   margin: 0.6rem;
 }
 
-.nav-bar ul li a:hover {
-  border-bottom: 2px solid #856d5afa;
+#nav-bar ul li a:hover {
+  color: #f38739;
+  border-bottom: 1px solid #f38739;
   transition: border-bottom 200ms ease-in-out;
 }
 
-.nav-bar ul li:hover {
-  transform: scale(1.1);
+#nav-bar ul li:hover {
+  transform: scale(1.035);
   transition: transform 200ms ease-in-out;
 }
 
@@ -163,67 +174,50 @@ body {
   top: 0em;
 }
 
-.bg-color {
-  position: absolute;
-  background-color: rgba(233, 190, 98, 0.3);
-  height: 500px;
-  width: 100%;
-}
-
-.main-container1 {
-  background-image: url(../images/image-main.png);
+.main-1 {
+  background-image: url(../images/jumbotron-img.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 70% cover;
   background-origin: border-box;
-  background-position: center;
-  height: 500px;
+  background-position: right center;
+  height: 550px;
   z-index: -10;
+  background-attachment: fixed;
+  position: relative;
+  top: -40px;
 }
 
-.main-container1 .main-content {
-  position: relative;
+.main-1 .main-content {
+  position: absolute;
   width: 70%;
   left: calc(50% - 1106px / 2);
   top: 30%;
 }
 
-.main-container1 .main-content .main-text {
+.main-content h1 {
   width: 100%;
-  font-style: normal;
-  font-weight: bold;
   font-size: 48px;
-  line-height: 55px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
+  color: #3c39f3;
   font-family: "Ubuntu", sans-serif;
-  text-shadow: 4px 4px 10px rgba(93, 90, 90, 0.5);
 }
 
-.main-container1 .main-content .learn-btn {
-  background-color: transparent;
-  backface-visibility: hidden;
+.main-content button {
   color: #856d5afa;
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 48px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-size: 20px;
+  /* line-height: 48px; */
   position: relative;
-  border-radius: 25px;
   box-shadow: 4px 4px 10px 8px rgba(93, 90, 90, 0.5);
   border: none;
-  padding: 10px 25px;
-  margin: 5px auto;
+  padding: 10px 15px;
+  margin: 30px auto;
   outline: none;
+  cursor: pointer;
 }
 
-.main-container1 .main-content .learn-btn::before {
+.main-content button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -234,5 +228,169 @@ body {
   margin: -5px;
   border-radius: inherit;
   background: linear-gradient(to right, #f38739, orange);
+}
+.main-content button:hover {
+  background-color: #cdb251;
+  color: #d9f0f3;
+}
+.main-2 header {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6em 0;
+}
+.sub-heading,
+.course-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 45%;
+}
+.main-2 .hr {
+  height: 8px;
+  width: 200px;
+  border: 1px solid transparent;
+  background-color: #cdb251;
+}
+.hr-1 {
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.hr-2 {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.course-heading h2 {
+  font-size: 68px;
+  color: #856d5afa;
+}
+.course-heading .fa {
+  text-align: center;
+  width: 40px;
+  font-size: 38px;
+  color: #cdb251;
+}
+.course-heading .fa:hover {
+  border-radius: 10%;
+  border: 1px solid #d9f0f3;
+  background-color: #856d5afa;
+  color: #d9f0f3;
+}
+.courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90vw;
+  align-items: center;
+  margin: 0 auto;
+}
+.course-card {
+  background-color: #fff;
+  /* flex: 0 1 420px; */
+  width: 320px;
+  height: fit-content;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.course-card:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  box-shadow: 6px 6px px rgba(93, 90, 90, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+.course-card .card-img{
+  position: relative;
+}
+.course-card .card-img::before{
+  content:"FREE";
+  background:linear-gradient(45deg , #f38739,#ecad5b ,#cdb251);
+  border-radius:50%;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing:1px;
+  font-weight: bolder;
+  position: absolute;
+  bottom: 0px;
+  top: 85%;
+  right: 25px;
+}
+.course-card .card-img::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.course-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 210px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.course-card .card-content {
+  margin: 25px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.course-description + hr {
+  opacity: 0.6;
+  width: 80%;
+}
+.course-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.course-title h3{
+  font-size: 21px;
+  font-weight: bold;
+  color: #856d5afa;
+
+}
+.course-detail p,
+.course-detail h4,
+.course-description p {
+  font-weight: normal;
+  font-size: 15px;
+  color: #856d5afa;
+  word-spacing: 3px;
+  white-space: normal;
+  line-height: 1.4;
+  text-align: start;
+  
+}
+.course-detail .course-instructor {
+  position: relative;
+  left: 50px;
+}
+.course-detail .course-instructor::before {
+  content: url(../images/user-icon.png);
+  border-radius: 50%;
+  position: absolute;
+  left: -52px;
+}
+.course-ratings i {
+  color: #cdb251;
+  font-size: 14px;
+  text-align: center;
+}
+.course-ratings i:nth-of-type(5) {
+  color: #856d5afa;
 }
 /*# sourceMappingURL=style.css.map */

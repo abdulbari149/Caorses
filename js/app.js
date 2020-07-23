@@ -3,4 +3,4 @@ document.addEventListener('scroll', ()=>{
     header.classList.add('left');
 })
 header.classList.remove('left')
-document.addEventListener("")
+
