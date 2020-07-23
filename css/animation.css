@@ -1,0 +1,14 @@
+.left{
+    animation: left 1200ms ease-in-out ;
+  }
+  @keyframes left{
+    from {
+      transform:translateX(-65%) ;
+      opacity: 0.6;
+    }
+    to{
+      transform:translateX(0%) ;
+      opacity: 1;
+    }
+  }
+  
