@@ -77,7 +77,7 @@ body {
 
 }
 #address-info{
-  width: 34%;
+  width: 30%;
 }
 .contact-item-detail h4 {
   text-align: start;
@@ -93,6 +93,7 @@ body {
   font-size: 12px;
   color: #856d5afa;
   white-space: normal;
+  word-wrap: break-word;
 }
 .section3 {
   grid-column: 1/4;
@@ -181,14 +182,16 @@ body {
 }
 .main-1 .main-image{
   width: 100%;
-  height: 590px;
-  background-image: url(../images/jumbotron-img-3.png);
+  height: 592px;
+  padding:0px 40px ;
+  background-image: url(../images/jumbotron-img-1.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #d9f0f3;
+   background-size: cover;
   background-position: center;
   position: absolute;
+  top: 152px;
   z-index: -2;
-  top: 155px;
 }
 
 #icons{
@@ -296,20 +299,22 @@ body {
   color: #d9f0f3;
 }
 .main-2 header {
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 60px 100px ;
+  place-items: center;
   margin: 6em 0;
 }
 .sub-heading,
 .course-heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-items: center;
+}
+.sub-heading p{
+  color: #856d5afa;
+  font-size: 14px;
+  margin: 0px 15px;
+  white-space: nowrap;
 }
 .main-2 .hr {
   height: 8px;
@@ -328,6 +333,8 @@ body {
 .course-heading h2 {
   font-size: 68px;
   color: #856d5afa;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .course-heading .fa {
   text-align: center;
@@ -346,7 +353,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 90vw;
+  align-items: center;
+  width: 85vw;
   align-items: center;
   margin: 0 auto;
 }
@@ -355,8 +363,8 @@ body {
   /* flex: 0 1 420px; */
   width: 320px;
   height: fit-content;
-  margin-right: auto;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 .course-card:hover {
   cursor: pointer;
