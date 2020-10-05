@@ -1,0 +1,8 @@
+#search-bar{
+    display: flex;
+    width: 30rem;
+    background-color: #8a7e7e;
+}
+#search-bar .search-bar__input{
+    flex-grow: 1;
+}

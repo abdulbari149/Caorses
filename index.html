@@ -11,85 +11,76 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="shortcut icon" href="images/title-icon.jpg" type="image/jpg" />
     <title>caorser.com</title>
   </head>
   <body>
     <header id="header-container">
-      <div class="section1">
-        <div class="brand-logo">
-          <img src="images/title-icon.jpg" alt="" />
-        </div>
-        <div class="brand-title">
-          <h3>caorser.com</h3>
-        </div>
-      </div>
-      <div class="section2">
-        <div class="contact-links">
+      <section id="header__top">
+        <div id="contact__detail" class="contact-links">
           <div class="contact-item" id="call-info">
-            <div class="contact-item-img">
-              <img
-                src="images/contact-detail-icons/call-icon.png"
-                alt="Call-icon"
-              />
-            </div>
-            <div class="contact-item-detail">
-              <h4>Phone</h4>
-              <p>+92 000 000-0000</p>
-            </div>
+            <i class="fa fa-phone contact-icon"></i>
+            <p>+92 000 000-0000</p>
           </div>
           <div class="contact-item" id="email-info">
-            <div class="contact-item-img">
-              <img
-                src="images/contact-detail-icons/email-icon.png"
-                alt="Email-icon"
-              />
-            </div>
-            <div class="contact-item-detail">
-              <h4>E-Mail</h4>
-              <p>info@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item" id="address-info">
-            <div class="contact-item-img">
-              <img src="images/contact-detail-icons/location-icon.png" alt="" />
-            </div>
-            <div class="contact-item-detail">
-              <h4>Location</h4>
-              <p>Near RiverStreet,Lee-market, Karachi</p>
-            </div>
+            <i class="fa fa-envelope contact-icon" aria-hidden="true"></i>
+            <p>courseBea.12@gmail.com</p>
           </div>
         </div>
-      </div>
-      <div class="section3">
-        <nav id="nav-bar">
+        <div id="register__detail">
+          <i class="fa fa-shopping-cart"></i>
+          <hr />
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+        </div>
+      </section>
+      <section id="header__bottom">
+        <!-- website name and its logo -->
+        <div id="brand">
+          <img src="images/title-icon.jpg" alt="" id="brand-logo" />
+          <h3 id="brand-title"><span>Course</span>Bea</h3>
+        </div>
+        <!-- a full navigation under the nav element -->
+        <nav id="nav__bar">
+          <!-- toggle menu button for mobile mode -->
+          <div id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <!-- navigation bar to help user navigate through the web -->
           <ul class="nav-list">
             <li class="nav-items">
-              <a class="nav-links" href="">Home</a>
+              <a class="nav-links" href="#" target="_blank">Home</a>
             </li>
             <li class="nav-items">
               <a class="nav-links" href="">About</a>
             </li>
             <li class="nav-items">
-              <a class="nav-links" href="">Courses</a
-              ><i class="fa fa-caret-down" aria-hidden="true"></i>
+              <a class="nav-links" href="">Courses</a>
             </li>
             <li class="nav-items">
-              <a class="nav-links" href="">Contact Us</a>
+              <a class="nav-links" href="">Shop</a>
             </li>
             <li class="nav-items">
-              <a class="nav-links" href="">Register Now</a>
+              <a class="nav-links" href="">Blog</a>
             </li>
             <li class="nav-items">
-              <a class="nav-links" href="">Login</a>
+              <a class="nav-links" href=""></a>
             </li>
           </ul>
-          <div class="search">
-            <input type="search" name="search" id="search-field" />
-            <span>Search Courses</span>
-          </div>
         </nav>
-      </div>
+        <div id="search-bar">
+          <input
+            type="text"
+            placeholder="Search Courses"
+            class="search-bar__input"
+          />
+          <button class="search-bar__sumbit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </section>
     </header>
     <main>
       <section class="main-1">
@@ -97,15 +88,24 @@
         <div id="icons">
           <a href="#" class="iconsBtn fa fa-twitter"></a>
           <a href="#" class="iconsBtn fa fa-facebook"></a>
-          <a href="#" class="iconsBtn fa fa-facebook"></a>
-          <a href="#" class="iconsBtn fa fa-facebook"></a>
-          <a href="#" class="iconsBtn fa fa-facebook"></a>
+          <a href="#" class="iconsBtn fa fa-linkedin"></a>
+          <a href="#" class="iconsBtn fa fa-youtube"></a>
+          <a href="#" class="iconsBtn fa fa-instagram"></a>
         </div>
         <div class="main-content">
-          <h1>
-            Online Education
-          </h1>
-          <a class="learnBtn" href="#">Learn More</a>
+          <h1>learn skills with experts anytime, anywhere</h1>
+          <p>
+            To get you trained we are providing a great variety of courses.Check
+            our courses now
+          </p>
+          <div class="main-btn">
+            <div class="btn-wrapper">
+              <a class="learnBtn" href="#">Learn Now</a>
+            </div>
+            <div class="btn-wrapper">
+              <a class="learnBtn" href="#">Courses</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="main-2">
@@ -122,20 +122,18 @@
           </div>
         </header>
         <div class="courses">
-          <div class="course-card card-1">
+          <div class="course-card">
             <div class="card-img">
               <img src="images/courses/c-1.jpg" alt="" />
             </div>
             <div class="card-content">
-              <div class="course-title">
-                <h3>HTML5 Fundamentals and Essentials</h3>
-              </div>
-              <div class="course-description">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  possimus modi minus delectus at voluptatibus!
-                </p>
-              </div>
+              <a href="#" target="_blank"
+                ><h3>HTML5 Fundamentals and Essentials</h3></a
+              >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                possimus modi minus delectus at voluptatibus!
+              </p>
               <hr />
               <div class="course-detail">
                 <div class="course-instructor">
@@ -155,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="course-card card-2">
+          <div class="course-card">
             <div class="card-img">
               <img src="images/courses/c-2.jpg" alt="" />
             </div>
@@ -188,7 +186,7 @@
               </div>
             </div>
           </div>
-          <div class="course-card card-3">
+          <div class="course-card">
             <div class="card-img">
               <img src="images/courses/c-3.jpg" alt="" />
             </div>
@@ -221,13 +219,79 @@
               </div>
             </div>
           </div>
-          <div class="course-card card-4">
+          <div class="course-card">
             <div class="card-img">
               <img src="images/courses/c-4.jpg" alt="" />
             </div>
             <div class="card-content">
               <div class="course-title">
-                <h3>Learn new Bootstrap 5 alpha </h3>
+                <h3>Learn new Bootstrap 5 alpha</h3>
+              </div>
+              <div class="course-description">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  possimus modi minus delectus at voluptatibus!
+                </p>
+              </div>
+              <hr />
+              <div class="course-detail">
+                <div class="course-instructor">
+                  <p>Instructor:</p>
+                  <h4>Abdul Bari</h4>
+                </div>
+                <div class="course-ratings">
+                  <div class="rating-stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>4.0 Ratings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="card-img">
+              <img src="images/courses/c-1.jpg" alt="" />
+            </div>
+            <div class="card-content">
+              <div class="course-title">
+                <h3>HTML5 Fundamentals and Essentials</h3>
+              </div>
+              <div class="course-description">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  possimus modi minus delectus at voluptatibus!
+                </p>
+              </div>
+              <hr />
+              <div class="course-detail">
+                <div class="course-instructor">
+                  <p>Instructor:</p>
+                  <h4>Abdul Bari</h4>
+                </div>
+                <div class="course-ratings">
+                  <div class="rating-stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>4.0 Ratings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="card-img">
+              <img src="images/courses/c-2.jpg" alt="" />
+            </div>
+            <div class="card-content">
+              <div class="course-title">
+                <h3>CSS3- From Beginner to Advance</h3>
               </div>
               <div class="course-description">
                 <p>
@@ -255,6 +319,7 @@
             </div>
           </div>
         </div>
+        <a href="course.html" class="Btn">more courses</a>
       </section>
     </main>
     <script src="js/app.js"></script>

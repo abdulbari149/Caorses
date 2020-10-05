@@ -3,7 +3,7 @@
   }
   @keyframes left{
     from {
-      transform:translateX(-65%) ;
+      transform:translateX(-180%) ;
       opacity: 0.6;
     }
     to{
